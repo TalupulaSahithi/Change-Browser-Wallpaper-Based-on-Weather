@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chrome extension</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.8.0/css/tachyons.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <script src="resize.js"></script>
+    <div class="container">
+        <p id="city">Telaprolu, IN</p>
+        <p id="date">11 October (Monday), 2021</p>
+        <p id="temp">34&deg;C</p>
+        <p id="min-max">32&deg;C (min) / 34&deg;C (max)</p>
+        <p id="weather">Clear</p>
+    </div>
+
+    <center>
+        <img height="92" width="272" src="Transparent_google_logo_2015.png" title="Google" style="padding-top: 115px;">
+    </center>
+    <center>
+
+        <form class="w-50 m2" style="margin-top:20px;margin-bottom:20px;" method="GET"
+            action="https://www.google.com/search">
+            <div class="cf">
+                <input class=" br2 f6 f5-l input-reset bn fl black-80 bg-white pa3 lh-solid w-100 br2-ns"
+                    placeholder="Search Google or type URL" type="search" aria-hidden="true" autocomplete="off"
+                    name="q">
+            </div>
+        </form>
+    </center>
+
+
+</body>
+
+</html>

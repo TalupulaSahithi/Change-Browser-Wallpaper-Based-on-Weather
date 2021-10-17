@@ -1,0 +1,17 @@
+{
+   "chrome_url_overrides": {
+      "newtab": "newimg.html"
+   },
+   "description": "This is a extension which change background image when you open new tab",
+   "icons": {
+      "128": "icons8-Responsive Filled-128.png",
+      "16": "icons8-Responsive Filled-50.png",
+      "48": "icons8-Responsive Filled-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhdfDSUoNsCbv5f3bgYEf0u4r00Z69uaqgDWBHk58Q7RdNy66jSfce8p/RpshQ9MLf2+m978+1FbjUd5/XY2WHheXaSV0XJeNrWvrPqrJL4qIooTnHBc3Yz8ah+XAipw4rk9oPVzc3p38775ILM8L0omtB5AmbOBWY3FzAWKD5Oc8k570I5hFStcbAJtZmxW+moGjWPcH75FdS3hgld5krO+7Il8KtrClH86pSz8TxHF69/RPfwK1pLFeHHvsK5a7w2np9h08Tyic+WX9eOX/MvNAmg02MNg44bC61mmD14sBt35H0a/K8aojUPlYmtyxRAqK3yY2teTTJgxOCYFKcQIDAQAB",
+   "manifest_version": 2,
+   "name": "Background changer",
+   "permissions": [ "https://source.unsplash.com/" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}
