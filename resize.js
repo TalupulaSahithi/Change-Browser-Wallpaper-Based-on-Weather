@@ -28,58 +28,24 @@ async function getapi1(city, region) {
     let weatherType = document.getElementById('weather');
     let weather_type = weather_data.weather[0].main
     weatherType.innerText = weather_type;
-
-
-    if (todayDate.getHours() > 17 && todayDate.getHours() <= 24) {
-        if ((todayDate.getHours() > 17 && todayDate.getHours() <= 24) && weather_type == 'Clear') {
-
-            document.body.style.backgroundImage = "url('images/clear-night.jpg')";
-
-        } else if ((todayDate.getHours() > 17 && todayDate.getHours() <= 24) && weather_type == 'Haze') {
-
-            document.body.style.backgroundImage = "url('images/haze-night.jpg')";
-
-        } else if ((todayDate.getHours() > 17 && todayDate.getHours() <= 24) && weather_type == 'Rain') {
-
-            document.body.style.backgroundImage = "url('images/rainy-night.jpg')";
-
-        } else if ((todayDate.getHours() > 17 && todayDate.getHours() <= 24) && weather_type == 'Mist') {
-
-            document.body.style.backgroundImage = "url('images/clear-night.jpg')";
-        } else {
-
-            document.body.style.backgroundImage = "url('images/clear-night.jpg')";
-        }
-    } else {
-        if (weather_type == 'Clear') {
-
-            document.body.style.backgroundImage = "url('images/clear.jpg')";
-
-        } else if (weather_type == 'Clouds') {
-
-            document.body.style.backgroundImage = "url('images/cloud.jpg')";
-
-        } else if (weather_type == 'Haze') {
-
-            document.body.style.backgroundImage = "url('images/cloud.jpg')";
-
-        } else if (weather_type == 'Rain') {
-
-            document.body.style.backgroundImage = "url('images/rain.jpg')";
-
-        } else if (weather_type == 'Snow') {
-
-            document.body.style.backgroundImage = "url('images/snow.jpg')";
-
-        } else if (weather_type == 'Thunderstorm') {
-
-            document.body.style.backgroundImage = "url('images/thunderstorm.jpg')";
-
-        } else {
-            document.body.style.backgroundImage = "url('images/clear.jpg')";
-        }
+    let d;
+    if (todayDate.getHours() > 17 && todayDate.getHours() <= 24){
+        d="night";
+    }else{
+        d="day";
     }
+    getapi2(weather_type,d);
 }
+    async function getapi2(weather_type,d) {
+        const url3 = "https://api.unsplash.com/search/photos?query="+weather_type+","+d+"&client_id=xDuigJ8mTZyMNpvrQHkwYwRWhwTWvpEvAWR0RZRM9tQ";
+        const response = await fetch(url3);
+        var imagedata = await response.json();
+        console.log(imagedata);
+        var imageurl=imagedata.results[1].urls.full;
+        document.body.style.backgroundImage = "url("+imageurl+")";
+
+   }
+
 function dateManage(dateArg) {
 
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
